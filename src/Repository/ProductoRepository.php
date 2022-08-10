@@ -42,7 +42,7 @@ class ProductoRepository extends ServiceEntityRepository
 //    /**
 //     * @return Producto[] Returns an array of Producto objects
 //     */
-   public function findByIdField($id): array
+    public function findByIdField($id): array
     {
         return $this->createQueryBuilder('p')
             ->andWhere('p.exampleField = :val')
@@ -52,15 +52,5 @@ class ProductoRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult()
         ;
-   }
-
-//    public function findOneBySomeField($value): ?Producto
-//    {
-//        return $this->createQueryBuilder('p')
-//            ->andWhere('p.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->getQuery()
-//            ->getOneOrNullResult()
-//        ;
-//    }
+    }
 }

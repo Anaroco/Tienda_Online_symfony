@@ -48,24 +48,16 @@
             if($imagen)
             {
                 $nombreOriginal = pathinfo($imagen->getClientOriginalName(), PATHINFO_FILENAME);
-                //para almacenarlo no es buena idea guardarlo con el nombre original, porque
-                //podemos tener una sobreescritura acccidental del fichero
                 $nombreGuardar = $slugger->slug($nombreOriginal)."-".uniqid().".".$imagen->guessExtension();
-                //Ahora ya podemos poner el codigo de mover el fichero a la ruta que le indiquemos
+                
                 try
                 {
-                    //ahora hacemos el equivalente en php de mover el fichero a la ruta definitiva
-                    //con esto le pasamos la ruta a donde lo vamos a mover y el nombre del fichero
-                    //es mucho mas sencillo que en PHP
                     $directory =  $this->getParameter('kernel.project_dir');
                     $ruta = $directory."\\uploads\\".date("F")."\\";
                     $fichero = $imagen->move($ruta,$nombreGuardar);
-
-                    //TODO, ahora podriamos introducir el valor en el campo correspondiente de usuario
-                    //de la ruta del fichero, en caso de que no queramos guardar todos los datos
-                    //del file en nuestra entidad
                     return $ruta.$nombreGuardar;
                 }
+
                 catch(Excepcion $e)
                 {
                     echo("Error al subir el fichero");
@@ -83,17 +75,13 @@
         {
 
             $formulario = $this->createForm(ProductosType::class, $producto);
-            //variable para mostrar un mensaje distinto en caso de error o alta ok
             $alta = "-1";
-            //Le metemos el handle request para procesarlo
             $formulario->handleRequest($request);
-            //Comprobamos si tiene datos
             if($formulario->isSubmitted())
             {
                
                 if($formulario->isValid())
                 {
-                    //debemos hacer un get especifico para la imagen
                     $fotos = $formulario->get("fotos")->getData();   
                     $fotos = $this->procesarImagen($fotos);
 
@@ -112,8 +100,6 @@
                         $producto->setFotos($fotos);
                         $producto->setFotoportada($fotoportada);
                         $producto->setFichatecnica($fichatecnica);
-
-                        //ponemos el codigo de guardar
                         $productRepository->add($producto, true);
                         $alta = true;
                 

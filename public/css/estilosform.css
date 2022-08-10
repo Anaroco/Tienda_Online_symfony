@@ -163,7 +163,6 @@ table.table .avatar {
     font-size: 13px;
 }
 
-/* Custom checkbox */
 .custom-checkbox {
     position: relative;
 }
@@ -222,7 +221,6 @@ table.table .avatar {
     background: #ddd;
 }
 
-/* Modal styles */
 .modal .modal-dialog {
     max-width: 400px;
 }

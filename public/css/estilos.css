@@ -1,7 +1,7 @@
 body{font-family: 'Roboto', sans-serif; font-size:10px;}
 
 .centrado{max-width: 1200px; margin:0 auto;}
-.btn_naranja {color:white; background-color: #cb9db3; border-radius:10px; padding: 10px 20px;  border: none;}
+.btn_naranja {color:white; background-color:#ff7f00; border-radius:10px; padding: 10px 20px;  border: none;}
 .btn_naranja:hover{cursor:pointer;}
 .txt{padding: 10px 20px;}
 .cmb{padding: 10px 20px;background-color: #f4f4f4;}
@@ -15,7 +15,7 @@ body{font-family: 'Roboto', sans-serif; font-size:10px;}
 .tabla tbody tr:nth-child(2n + 1){background-color: #ffebd8;}
 .tabla td:nth-child(2){text-align: left;}
 
-/* Bloque para los formularios */
+
 #productos div label, #productos div input{display: inline-block; width: 100%;}
 #productos div input{padding: 10px 20px; border-radius: 5px;}
 #productos div label{line-height: 2em; font-size: 1.5em; color: #ff7f00 ;}
@@ -23,14 +23,14 @@ body{font-family: 'Roboto', sans-serif; font-size:10px;}
 #productos > div:last-of-type button{width: 80%;}
 .help-text{font-size: 1.2em; font-style: italic; margin: 10px 0;}
 
-/*Bloque para la vista individual del producto*/
+
 #producto{margin:45px 0; display: flex; width: 85%; font-size:1.5em;}
 #producto > div{display: inline-block; width: 45%; min-width: 350px; padding: 15px;}
 #producto > div > header > h1{font-size: 2em; padding: 15px 0; color: #9d7a75 ;}
 #producto p{line-height: 2em;}
 #producto .desripcion{margin: 15px 0; font-style: italic; text-align: justify;}
 
-/*Otra opcion es usaar selectores*/
+
 body > header {font-size:1.3em; }
 body > header i{font-size:1.3em;}
 body > header a, body > header, body > header a div{color: #443c3c;}
@@ -63,11 +63,8 @@ body > header > div:nth-child(2) > div > div div:first-child div{position:absolu
 body > header > div:nth-child(2) > div > div div:last-child{width: 64%;}
 body > header > div:nth-child(2) > div > div div:last-child p:first-of-type{line-height: 27px;}
 
-/* #newfooter{
-    background-color: #cb9db3;
-    width: 100%;
-    display:block;
-}
+
 .container{
-display:block;
-} */
+border-top: 4px solid #ff7f00;
+padding: 40px;
+}
