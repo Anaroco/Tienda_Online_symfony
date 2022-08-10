@@ -50,7 +50,7 @@ body > header > div:nth-child(2) > div{display:flex; align-items: center;}
 body > header > div:nth-child(2) > div form{width: 50%; min-width: 200px; text-align: center;}
 body > header > div:nth-child(2) > div form .btn_naranja{border-top-left-radius: 0px; margin-left: -3px;border-bottom-left-radius: 0px; min-height: 39px;;}
 body > header > div:nth-child(2) > div form .txt{width: 45%; min-width: 200px;margin-left: -4px;}
-body > header > div:nth-child(2) > div form .cmb{height: 40px; border-bottom-left-radius: 10px; border-top-left-radius: 10px;}
+body > header > div:nth-child(2) > div form .cmb{height: 55px; border-bottom-left-radius: 10px; border-top-left-radius: 10px;}
 body > header > div:nth-child(2) > div > img{max-height: 55px;}
 body > header > div:nth-child(2) > div > div {color:white; min-width: 150px;height: 40px;display: flex;}
 body > header > div:nth-child(2) > div > div div{display:inline-block; height: 40px;}
@@ -62,3 +62,12 @@ body > header > div:nth-child(2) > div > div div:first-child div{position:absolu
     padding:5px; border-radius:50%; text-align: center;line-height: 15px;;}
 body > header > div:nth-child(2) > div > div div:last-child{width: 64%;}
 body > header > div:nth-child(2) > div > div div:last-child p:first-of-type{line-height: 27px;}
+
+/* #newfooter{
+    background-color: #cb9db3;
+    width: 100%;
+    display:block;
+}
+.container{
+display:block;
+} */

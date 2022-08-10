@@ -54,7 +54,7 @@
 
 table.table tr th,
 table.table tr td {
-    border-color: #d2a9a9;
+    border-color: #ff7f00;
     padding: 12px 15px;
     vertical-align: middle;
 }
@@ -141,7 +141,7 @@ table.table .avatar {
 
 .pagination li.active a,
 .pagination li.active a.page-link {
-    background: #cb9db3;
+    background: #ff7f00;
 }
 
 .pagination li.active a:hover {

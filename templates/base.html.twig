@@ -14,7 +14,7 @@
 			<link href="{{ asset('css/reset.css') }}" type="text/css" rel="stylesheet"/>
 			<link href="{{ asset('css/estilos.css') }}" type="text/css" rel="stylesheet"/>
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-            <link type="text/css" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
+			<link type="text/css" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 			<link rel="preconnect" href="https://fonts.googleapis.com">
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 			<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -134,65 +134,38 @@
 		</div>
 		{% block pie %}
 			<footer>
-				<div id="pie_nivel_0">
-					<div>
-						<img src="#"/>
-						<p>
-							Registrate en el boletin</p>
-						<p>
-							Recibe novedades, cupones de descuento y las mejores ofertas</p>
+				<footer class="page-footer font-small special-color-dark pt-4">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 mb-4">
+								<form class="form-inline">
+									<input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Buscar" aria-label="Search">
+									<i class="fas fa-search" aria-hidden="true"></i>
+								</form>
+							</div>
+							<div class="col-md-6 mb-4">
+								<form class="input-group">
+									<input type="text" class="form-control form-control-sm" placeholder="Introduce tu email" aria-label="Your email" aria-describedby="basic-addon2">
+									<div class="input-group-append">
+										<button class="btn btn-sm btn-outline-white my-0" type="button">Suscribirse</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<!-- Facebook -->
+						<a class="fb-ic">
+							<i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+						</a>
+						<!-- Twitter -->
+						<a class="tw-ic">
+							<i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+						</a>
 					</div>
-					<form>
-						<input type="search" name="newsletter" placeholder="Su direccion de correo"/>
-						<input type="submit" name="enviar" value="Suscribirse"/>
-					</form>
-				</div>
-				<div id="pie_nivel_1">
-					<div>
-						<img src="#" alt="logo"/>
-						<p>
-							Info contacto</p>
-						<nav>
-							<ul>
-								<li><a href="#"><img src="" alt="Ico Facbeook"/></a></li>
-								<li><a href="#"><img src="" alt="Ico Twitter"/></a></li>
-							</ul>
-						</nav>
+					<div class="footer-copyright text-center py-3">© 2022 Copyright:
+						<a href="/">TiendaFeliz.com</a>
 					</div>
-					<nav>
-						<header>
-							<h1>Sobre nosotros</h1>
-						</header>
-						<ul>
-							<li><a href="#">Inicio</a></li>
-							<li><a href="#">Opcion 1</a></li>
-							<li><a href="#">Opcion 2</a></li>
-						</ul>
-					</nav>
-					<nav>
-						<header>
-							<h1>Informacion</h1>
-						</header>
-						<ul>
-							<li><a href="#">Inicio</a></li>
-							<li><a href="#">Opcion 1</a></li>
-							<li><a href="#">Opcion 2</a></li>
-						</ul>
-					</nav>
-					<div>
-						<p>Datos de contacto</p>
-					</div>
-				</div>
-				<div id="pie_nivel_2">
-					<p>
-						&copy;
-						<a href="#"/>TiendaMusicalTop</p>
-				</a>
-				Tu tienda musical
-			</p>
-			<p>
-				Medios de pago
-			</p>
+				</footer>
+			{% endblock %}
 		</body>
-	</html>
-</div></footer>{% endblock %}</body></html>
+	</body>
+</html>
