@@ -3,54 +3,37 @@
 namespace App\Entity;
 
 use App\Repository\ProductoRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass=ProductoRepository::class)
- */
+#[ORM\Entity(repositoryClass: ProductoRepository::class)]
 class Producto
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $titulo;
+    #[ORM\Column(length: 255)]
+    private ?string $titulo = null;
 
-    /**
-     * @ORM\Column(type="text", nullable=true)
-     */
-    private $descripcion;
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $descripcion = null;
 
-    /**
-     * @ORM\Column(type="float", nullable=true)
-     */
-    private $precio;
+    #[ORM\Column(nullable: true)]
+    private ?float $precio = null;
 
-    /**
-     * @ORM\Column(type="integer", nullable=true)
-     */
-    private $iva;
+    #[ORM\Column(nullable: true)]
+    private ?int $iva = null;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $fotos;
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $fotos = null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $fotoportada;
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $fotoportada = null;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $fichatecnica;
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $fichatecnica = null;
 
     public function getId(): ?int
     {
@@ -122,7 +105,7 @@ class Producto
         return $this->fotoportada;
     }
 
-    public function setFotoportada(string $fotoportada): self
+    public function setFotoportada(?string $fotoportada): self
     {
         $this->fotoportada = $fotoportada;
 

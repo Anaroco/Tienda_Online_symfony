@@ -1,15 +1,40 @@
 {% extends "base.html.twig" %}
 
 {% block cuerpo %}
-	<table>
+	<table class="tabla">
 		<thead>
 			<tr>
-				<th>Titulo</th>
-				<th>Precio</th>
-				<th>Acciones</th>
+				<th>
+					Id
+				</th>
+				<th>
+					Titulo
+				</th>
+				<th>
+					Precio
+				</th>
+				<th>
+					Descripción
+				</th>
 			</tr>
 		</thead>
-        <tbody>
+		<tbody>
+			{% for producto in productos %}
+				<tr>
+					<td>
+						{{producto.id}}
+					</td>
+					<td>
+						{{producto.titulo}}
+					</td>
+					<td>
+						{{producto.precio}}
+					</td>
+					<td>
+						Descripción
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
 	</table>
-
 {% endblock %}
